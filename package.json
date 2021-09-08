@@ -1,6 +1,6 @@
 {
-  "name": "@bluehorizonart/uikit",
-  "version": "0.0.1",
+  "name": "grishauikit",
+  "version": "0.0.2",
   "description": "Set of UI components for bluehorizon projects",
   "license": "MIT",
   "main": "dist/index.cjs.js",
@@ -16,12 +16,11 @@
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf ./dist && rollup -c && tsc -d --emitDeclarationOnly --declarationDir dist",
+    "build": "rm -rf ./dist && tsc -d  --emitDeclarationOnly --declarationDir dist && rollup -c",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "format:check": "prettier --check --loglevel error 'src/**/*.{js,jsx,ts,tsx}'",
     "format:write": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
-    "test": "jest",
-    "prepublishOnly": "yarn build"
+    "test": "jest"
   },
   "jest": {
     "setupFilesAfterEnv": [
@@ -77,8 +76,5 @@
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
     "styled-components": "^5.2.3"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
